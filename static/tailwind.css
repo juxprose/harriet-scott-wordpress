@@ -9,6 +9,11 @@
 
 @tailwind base;
 @tailwind components;
+
+.panel {
+  @apply max-w-screen-lg mx-auto px-10 xl:px-0;
+}
+
 @tailwind utilities;
 
 /* Buttons */
