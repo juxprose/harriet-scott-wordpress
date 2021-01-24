@@ -66,6 +66,11 @@ class StarterSite extends Timber\Site {
 		add_action( 'init', array( $this, 'register_post_types' ) );
 		add_action( 'init', array( $this, 'register_taxonomies' ) );
 		parent::__construct();
+
+		// ACF Global Options
+		if( function_exists('acf_add_options_page') ) {
+			acf_add_options_page();
+		}
 	}
 	/** This is where you can register custom post types. */
 	public function register_post_types() {
