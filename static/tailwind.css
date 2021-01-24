@@ -10,3 +10,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Buttons */
+
+.btn {
+  @apply bg-gray-800 text-white px-5 py-2 text-sm uppercase font-light tracking-widest hover:bg-gray-600 transition duration-500 ease-in-out;
+}
+
+.btn:after {
+  @apply pl-2;
+  content: "\00bb";
+}
