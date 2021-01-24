@@ -1,0 +1,33 @@
+{
+  "name": "harriet-scott",
+  "version": "1.0.0",
+  "description": "The \"_s\" for Timber: a dead-simple theme that you can build from. The primary purpose of this theme is to provide a file structure rather than a framework for markup or styles. Configure your Sass, scripts, and task runners however you would like!",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "watch": "cross-env NODE_ENV=development postcss static/tailwind.css -o style.css --watch",
+    "build": "cross-env NODE_ENV=production postcss static/tailwind.css -o style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://curiousways@github.com/juxprose/harriet-scott-wordpress.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juxprose/harriet-scott-wordpress/issues"
+  },
+  "homepage": "https://github.com/juxprose/harriet-scott-wordpress#readme",
+  "dependencies": {
+    "autoprefixer": "^10.2.3",
+    "postcss": "^8.2.4",
+    "postcss-cli": "^8.3.1",
+    "tailwindcss": "^2.0.2"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  }
+}
