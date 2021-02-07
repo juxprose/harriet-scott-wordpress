@@ -11,7 +11,11 @@
 @tailwind components;
 
 .panel {
-  @apply max-w-screen-lg mx-auto px-10 xl:px-0;
+  @apply mx-auto px-10 xl:px-0;
+}
+
+.header-link {
+  @apply transition duration-500 ease-in-out text-gray-100 hover:text-gray-400;
 }
 
 @tailwind utilities;
@@ -25,4 +29,10 @@
 .btn:after {
   @apply pl-2;
   content: "\00bb";
+}
+
+/* Dividers */
+
+.divider {
+  @apply block my-10 text-center;
 }

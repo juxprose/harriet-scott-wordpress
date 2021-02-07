@@ -1,1 +1,26 @@
-Copyright {{"now"|date('Y')}}
+<footer class="from-gray-100 bg-gradient-to-b mt-20">
+
+  <div class="panel max-w-screen-lg py-8">
+
+    <div class="md:flex md:items-center md:justify-between">
+      
+      <div class="flex justify-center space-x-3 md:order-2">
+        <a href="#" class="text-gray-900 hover:text-black">
+          {% include 'partial/icon-twitter.twig' %}
+        </a>
+        <a href="#" class="text-gray-900 hover:text-black">
+          {% include 'partial/icon-instagram.twig' %}
+        </a>
+      </div>
+  
+      <div class="mt-8 md:mt-0 md:order-1">
+        <p class="text-center text-sm">
+          &copy; {{"now"|date('Y')}} {{ site.name }}
+        </p>
+      </div>
+  
+    </div>
+
+  </div>
+
+</footer>
