@@ -11,12 +11,18 @@
 		<header class="header">
 			{% block header %}
 				<div class="py-3 bg-black shadow-lg">
-					<div class="panel flex justify-between items-center flex-col sm:flex-row">
+					<div class="panel max-w-screen-lg flex justify-between items-center flex-col sm:flex-row">
 						<nav id="nav-social" class="nav-social absolute left-0 top-0 sm:relative" role="navigation">
-							<ul>
+							<ul class="flex space-x-2">
 								<li>
-									<a href="#">Instagram</a>
-									<a href="#">{% include 'partial/icon-twitter.twig' %}</a>
+						      <a href="#" class="header-link">
+						        {% include 'partial/icon-twitter.twig' %}
+						      </a>
+								</li>
+								<li>
+						      <a href="#" class="header-link">
+						        {% include 'partial/icon-instagram.twig' %}
+						      </a>
 								</li>
 							</ul>
 						</nav><!-- #nav -->
