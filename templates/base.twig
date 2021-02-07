@@ -11,8 +11,8 @@
 		<header class="header">
 			{% block header %}
 				<div class="py-3 bg-black shadow-lg">
-					<div class="panel flex justify-between">
-						<nav id="nav-social" class="nav-social" role="navigation">
+					<div class="panel flex justify-between items-center flex-col sm:flex-row">
+						<nav id="nav-social" class="nav-social absolute left-0 top-0 sm:relative" role="navigation">
 							<ul>
 								<li>
 									<a href="#">Instagram</a>
@@ -20,9 +20,9 @@
 								</li>
 							</ul>
 						</nav><!-- #nav -->
-						<h1 class="uppercase text-center text-white font-light tracking-widest" role="banner">
-							<a href="{{site.url}}" rel="home">{{site.name}}</a>
-						</h1>
+						<div class="h-10 w-10 my-3 sm:my-0">
+							<a href="{{site.url}}" rel="home">{% include 'partial/site-logo.twig' %}</a>
+						</div>
 						<nav id="nav-main" class="nav-main" role="navigation">
 							{% include "menu.twig" with {'items': menu.get_items} %}
 						</nav><!-- #nav -->
