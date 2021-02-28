@@ -1,7 +1,7 @@
 {% if menu %}
 	<ul class="flex">
 	{% for item in items %}
-		<li class="text-white text-sm px-2 {{ item.classes | join(' ') }}">
+		<li class="text-white text-sm px-2 uppercase tracking-widest {{ item.classes | join(' ') }}">
 			<a class="header-link" target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
 			{% include "menu.twig" with {'items': item.children} %}
 		</li>

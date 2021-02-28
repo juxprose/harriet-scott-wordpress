@@ -1,32 +1,44 @@
 {% extends "base.twig" %}
 
 {% block content %}
-	<div class="content-wrapper">
-		<article class="post-type-{{ post.post_type }}" id="post-{{ post.ID }}">
-			<img src="{{ post.thumbnail.src|resize(1200, 300) }}">
-			<section class="article-content">
-				<h1 class="article-h1">{{ post.title }}</h1>
-				<a href="{{ post.link }}">{{ _e('edit') }}</a>
-				<p class="blog-author">
-					<span>By</span><a href="{{post.author.path}}"> {{ post.author.name }} </a><span>&bull;</span> <time datetime="{{ post.date|date('Y-m-d H:i:s') }}">{{ post.date }}</time>
-				</p>
-				<div class="article-body">
-					{{post.content}}
-				</div>
-			</section>
+
+	<article class="post-type-{{ post.post_type }}" id="post-{{ post.ID }}">
+
+		<div class="from-gray-100 bg-gradient-to-b pt-20 mb-10">
+		  <div class="panel max-w-screen-xl">
+		    <div class="md:flex items-start">
+		      <div class="flex-1 p-10 -mr-5 relative z-5 from-gray-200 bg-gradient-to-b">
+		      	<h1 class="font-display text-4xl sm:text-6xl mb-10">{{ post.title }}</h1>
+						<time class="text-sm" datetime="{{ post.date|date('Y-m-d H:i:s') }}">{{ post.date }}</time>
+						<div class="prose font-light mt-4">
+							{{post.content}}
+						</div>
+		      </div>
+		      <div class="flex-1 mt-5">
+		        <img class="shadow-lg" src="{{ post.thumbnail.src|resize(600, 600) }}" />
+						<div class="ml-10 mt-10">
+							<h3 class="font-display text-xl">Subscribe to Harriet's Blog</h3>
+							{{ function('do_shortcode', '[jetpack_subscription_form]') }}
+						</div>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+		<div class="from-gray-100 bg-gradient-to-b pt-20 mb-20">
 
 			<!-- comment box -->
-			<section class="comment-box">
+			<section class="panel max-w-screen-xl">
 				<!-- comments -->
 				<div class="comments">
 				    {% if post.comments %}
-					<h3> comments </h3>
+					<h3 class="font-display text-3xl sm:text-5xl mb-10">Comments</h3>
 					{% for cmt in post.comments %}
 					    {% include "comment.twig" with {comment:cmt} %}
 					{% endfor %}
 				    {% endif %}
 				</div>
-
+		
 				{% if post.comment_status == "closed" %}
 					<p> comments for this post are closed </p>
 				{% else %}
@@ -34,6 +46,11 @@
 				    {% include "comment-form.twig" %}
 				{% endif %}
 			</section>
+
+		</div>
+
 		</article>
+
 	</div><!-- /content-wrapper -->
+
 {% endblock %}
