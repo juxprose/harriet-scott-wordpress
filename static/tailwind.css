@@ -8,6 +8,11 @@
 */
 
 @tailwind base;
+
+h1, h2, h3, h4 {
+  /* @apply text-hs-maroon; */
+}
+
 @tailwind components;
 
 .panel {
@@ -23,7 +28,7 @@
 /* Buttons */
 
 .btn {
-  @apply bg-gray-800 text-white px-5 py-2 text-sm uppercase font-light tracking-widest hover:bg-gray-600 transition duration-500 ease-in-out;
+  @apply bg-hs-maroon text-white px-5 py-2 text-sm uppercase font-light tracking-widest hover:bg-black transition duration-500 ease-in-out;
 }
 
 .btn:after {

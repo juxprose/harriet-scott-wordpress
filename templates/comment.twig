@@ -1,21 +1,19 @@
-<div class="blog-comment {{comment.comment_type}}" id="blog-comment-{{comment.ID}}">
-	<h5 class="comment-author">{{comment.author.name}} says</h5>
-	<div class="comment-content">{{comment.comment_content|wpautop}}</div>
-
-	<section class="comment-box">
+<div class="mb-10 {{comment.comment_type}}" id="blog-comment-{{comment.ID}}">
+	<h5>{{comment.author.name}} says:</h5>
+	<div class="comment-content font-light my-5 max-w-screen-md">{{comment.comment_content|wpautop}}</div>
+	{# <section class="comment-box">
 		
 		<!-- comment form -->
 		{% include "comment-form.twig" %}
 
 		<!-- child comments -->
 		{% if post.comments %}
-			<h4> replies </h4>
-			<div class="comments">
+			<div class="comments ml-5">
 				{% for cmt in comment.children %}
 					{% include "comment.twig" with {comment:cmt} %}
 				{% endfor %}
 			</div>
 		{% endif %}
 
-	</section>
+	</section> #}
 </div>
