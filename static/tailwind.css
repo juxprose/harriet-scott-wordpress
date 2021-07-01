@@ -9,8 +9,8 @@
 
 @tailwind base;
 
-h1, h2, h3, h4 {
-  /* @apply text-hs-maroon; */
+html {
+  scroll-behavior: smooth;
 }
 
 @tailwind components;

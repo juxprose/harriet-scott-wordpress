@@ -10,8 +10,7 @@
 		<a class="skip-link sr-only" href="#content">{{ _e( 'Skip to content') }}</a>
 		<header class="header">
 			{% block header %}
-				<div class="py-3 bg-hs-maroon shadow-lg">
-					<div class="panel max-w-screen-lg flex justify-between items-center flex-col sm:flex-row">
+
 						<nav id="nav-social" class="nav-social absolute left-0 top-0 sm:relative" role="navigation">
 							<ul class="flex space-x-2">
 								<li>
@@ -25,15 +24,8 @@
 						      </a>
 								</li>
 							</ul>
-						</nav><!-- #nav -->
-						<div class="h-10 w-10 my-3 sm:my-0">
-							<a href="{{site.url}}" rel="home">{% include 'partial/site-logo.twig' %}</a>
-						</div>
-						<nav id="nav-main" class="nav-main" role="navigation">
-							{% include "menu.twig" with {'items': menu.get_items} %}
-						</nav><!-- #nav -->
-					</div>
-				</div>
+						</nav>
+
 			{% endblock %}
 		</header>
 

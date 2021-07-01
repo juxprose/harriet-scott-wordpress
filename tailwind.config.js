@@ -9,6 +9,7 @@ module.exports = {
 				'hs-maroon': '#800000',
 				'hs-black': '#434343',
 				'hs-dust-pink': '#FFA082',
+				'hs-dust-pink-50': '#ffcdbd',
 				'hs-marmelade': '#ffddb0',
 				'hs-seagrove-50': '#d3f6f1',
 				'hs-seagrove': '#B6EBE3',
