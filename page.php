@@ -25,4 +25,11 @@ $context = Timber::context();
 
 $timber_post     = new Timber\Post();
 $context['post'] = $timber_post;
+
+$args = array(
+  'numberposts' => 3,
+  'order' => 'DESC',
+);
+$context['latest_posts'] = Timber::get_posts($args);
+  
 Timber::render( array( 'page-' . $timber_post->post_name . '.twig', 'page.twig' ), $context );
