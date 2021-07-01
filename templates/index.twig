@@ -5,25 +5,10 @@
 	<!-- Website Introduction -->
 	{% include 'partial/home-intro.twig' %}
 
-	<!-- Posts -->
-  <div class="from-gray-50 bg-gradient-to-b py-10 lg:px-5">
-		<div class="max-w-screen-xl panel">
-			
-			<h2 class="text-5xl font-display text-center">My Blogs</h2>
-			<span class="divider">&mdash;</span>	
-	
-			<div class="grid sm:grid-cols-2 gap-10">
-				{% for post in posts %}
-					{% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
-				{% endfor %}
-			</div>
-	
-		</div>
-	</div>
-	
+	<!-- Blogs -->
+	{% include 'partial/home-blogs.twig' %}
+
 	<!-- About -->
 	{% include 'partial/home-about.twig' %}	
-	
-	{% include 'partial/pagination.twig' with { pagination: posts.pagination({show_all: false, mid_size: 3, end_size: 2}) } %}
 
 {% endblock %}
