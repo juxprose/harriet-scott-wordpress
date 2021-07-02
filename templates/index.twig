@@ -2,9 +2,26 @@
 
 {% block content %}
 
-	{% for post in posts %}
-		{% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
-	{% endfor %}
+	<div class="max-w-screen-xl panel py-20">
+				
+		<div class="text-center">
+			<h1 class="text-6xl tracking-wide font-display">
+				My blog posts
+			</h1>
+			<p class="mt-5 max-w-2xl mx-auto text-lg">
+				Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa libero labore natus atque, ducimus sed.
+			</p>
+		</div>		
+				
+		<div class="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
+		
+			{% for post in posts %}
+				{% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
+			{% endfor %}
+			
+		</div>
+	
+	</div>
 	
 	{% include 'partial/pagination.twig' with { pagination: posts.pagination({show_all: false, mid_size: 3, end_size: 2}) } %}
 {% endblock %}

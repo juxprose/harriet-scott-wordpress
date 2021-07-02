@@ -1,29 +1,54 @@
 <div class="comment-form">
-<h3 class="font-display text-2xl mb-5">Add comment</h3>
-<form class="comment-form" method="post" action="{{ site.site_url~'/wp-comments-post.php' }}">
+    
+  <h3 class="font-display text-2xl mb-5">Add comment</h3>
+    
+  <form class="comment-form" method="post" action="{{ site.site_url~'/wp-comments-post.php' }}">
+    
     {% if  user %}
         <input type="hidden" name="email" value="{{ user.email }}">
         <input type="hidden" name="author" value="{{ user.name }}">
         <input type="hidden" name="url" value="{{ user.link }}">
     {% else %}
-        <label>Email<br>
-            <input required name="email" type="email" id="email">
-        </label>
-        <label>Name<br>
-            <input required name="author" type="text">
-        </label>
-        <label>Website<br>
-            <input name="url" type="url">
-        </label>
+
+        <div>
+          <label for="email" class="block">Email</label>
+          <div class="mt-1">
+            <input required name="email" type="email" id="email" class="mb-5 max-w-sm shadow-sm focus:ring-gray-500 focus:border-gray-500 block w-full sm:text-sm border border-gray-300 p-3 rounded-md" placeholder="you@example.com">
+          </div>
+        </div>
+        
+        <div>
+          <label for="email" class="block">Name</label>
+          <div class="mt-1">
+            <input required name="author" type="text" class="mb-5 max-w-sm shadow-sm focus:ring-gray-500 focus:border-gray-500 block w-full sm:text-sm border border-gray-300 p-3 rounded-md">
+          </div>
+        </div>   
+        
+        <div>
+          <label for="email" class="block">Website</label>
+          <div class="mt-1">
+            <input name="url" type="url" class="mb-5 max-w-sm shadow-sm focus:ring-gray-500 focus:border-gray-500 block w-full sm:text-sm border border-gray-300 p-3 rounded-md">
+          </div>
+        </div>       
+    
     {% endif %}
-    <label>
-        <span class="sr-only">Comment</span>
+    
+    <div>
+      <label for="email" class="block">Comment</label>
+      <div class="mt-1">
         <textarea name="comment" rows="10" class=" max-w-screen-lg mb-5 shadow-sm focus:ring-gray-500 focus:border-gray-500 block w-full sm:text-sm border border-gray-300 p-3 rounded-md"></textarea>
-    </label>
+      </div>
+    </div>      
+    
     <input name="comment_post_ID" value="{{ post.id }}" type="hidden">
     <input name="comment_parent"  value="{{ comment.ID|default('0') }}" type="hidden">
+    
     <button type="submit" name="Submit" class="btn">Send</button>
+    
     <button type="reset" class="text-sm">Cancel</button>
+    
     <p class="text-sm mt-5">Your comment will be revised by the site if needed.</p>
-</form>
+    
+  </form>
+  
 </div>
