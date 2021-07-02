@@ -2,29 +2,17 @@
   
   <div class="lg:flex-1 xl:flex-none xl:w-1/3 items-center flex lg:pl-10 mb-20 lg:mb-0">
     <div class="lg:absolute lg:left-0 bg-hs-seagrove-50 rounded-tr-lg rounded-br-lg lg:w-1/3 xl:w-1/4 lg:h-670"></div>
-    <img class="rounded-lg relative z-10 shadow-lg" height="390" width="390" src="{{ theme.path() }}/static/images/placeholder2.jpg" alt="">
+    <img class="rounded-lg relative z-10 shadow-lg" height="390" width="390" src="{{ Image(options.global_about__img).src }}" alt="{{ options.global_about__title }}">
   </div>
   
   <div class="lg:flex-1 xl:flex-none xl:w-2/3 xl:pl-24">
     
     <h2 class="text-hs-seagrove">About</h2>
     
-    <h3 class="font-display text-5xl tracking-wide mt-2 mb-10">Harriet Scott headline title</h3>
+    <h3 class="font-display text-5xl tracking-wide mt-2 mb-10">{{ options.global_about__title }}</h3>
     
     <div class="prose">
-      
-      <p class="text-lg">Harriet is an award winning radio presenter who, since September 2017, has been co-hosting Magic Breakfast alongside Ronan Keating.</p>
-      
-      <p>With over 30 years on air experience, Harriet has hosted shows on Heart, Virgin Radio, Radio 2, BBC London, and a string of local radio stations where she started to make a name for herself as one of the top female DJs in the UK.</p>
-      
-      <p>Harriet has also appeared on TV as a regular newspaper reviewer for the BBC, a film critic for Sky, not to mention a few stints on the gameshow Pointless Celebrities! A much sought after voice over artist, Harriet is also working on her debut novel.</p>
-      
-      <p>Harriet is on the board of trustees of the Radio Academy which is the UK industry charity dedicated to the celebration and promotion of excellence in radio and audio.</p>
-      
-      <p>A patron of the charity Cash for Kids and a school governor, Harriet is passionate about helping to give all children a secure, nurturing environment that they can learn in and have the confidence to spread their wings as they grow older.</p>
-      
-      <p>A history graduate from Hull University, Harriet still loves to read books on the subject and loves literature too.  She has also recently become obsessed with creating a beautiful garden despite the presence of her two boys playing football and her Labrador digging holes.</p>
-      
+      {{ options.global_about__text }}
     </div>  
   
   </div>
